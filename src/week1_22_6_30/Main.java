@@ -1,4 +1,4 @@
-//package week1_22_6_30;
+package week1_22_6_30;
 // uhunt problem 10550
 
 import java.io.FileInputStream;
@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-    Scanner sc = new Scanner(System.in);
+//    Scanner sc = new Scanner(System.in);
     void go() throws Exception {
-//        sc = new Scanner(new FileInputStream("c:\\Users\\asus\\Desktop\\chaprog\\src\\week1_22_6_30\\in.txt"));
+      Scanner sc = new Scanner(new FileInputStream("src/week1_22_6_30/in.txt"));
         List<Integer> keep = new ArrayList<Integer>();
         int current = 0;
         int total = 0;
