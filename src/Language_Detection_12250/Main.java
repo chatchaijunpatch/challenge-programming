@@ -11,7 +11,7 @@ public class Main {
     Scanner sc = new Scanner(System.in);
 
     void go() throws Exception {
-        sc = new Scanner(new FileInputStream("src/Language_Detection_12250/in.txt"));
+//        sc = new Scanner(new FileInputStream("src/Language_Detection_12250/in.txt"));
         List<String> keep = new ArrayList<>();
         while (true) {
             String word = sc.next();
