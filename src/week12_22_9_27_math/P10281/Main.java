@@ -11,25 +11,29 @@ public class Main {
 
     void go() throws Exception {
         sc = new Scanner(new FileInputStream("src/in.txt"));
-        int keep = 0;
-        Date date1 = new Date();
+        double previous =0 ;
+        double distance =0;
+        double currentspeed = 0;
         String a = sc.nextLine();
-        while (sc.hasNextLine()) {
+        while (a != null) {
+
             SimpleDateFormat simpleDateFormat = new SimpleDateFormat("HH:mm:ss");
             String[] input = a.split(" ");
+            double currenttime = simpleDateFormat.parse(input[0]).getTime();
+            double travel = currenttime - previous;
+            double currentspeedtravel = currentspeed * (travel/3600000);
             if (input.length == 2){
-                 date1 =simpleDateFormat.parse(input[0]);
-                 keep = Integer.parseInt(input[1]);
-            }
-            else {
-                Date date2 = simpleDateFormat.parse(input[0]);
-                long differenceInMilliSeconds
-                        = Math.abs(date2.getTime() - date1.getTime());
-                long differenceInMinutes
-                        = (differenceInMilliSeconds / (60 * 1000)) % 60;
-//                System.out.println((differenceInMinutes/60)*keep);
+                distance+= currentspeedtravel;
+                previous = currenttime;
+
+                currentspeed = Double.parseDouble(input[1]);
 
             }
+            else {
+                System.out.printf(input[0]+" "+ "%.2f km"+"\n",(distance+currentspeedtravel));
+
+            }
+            if (!sc.hasNextLine())break;
             a = sc.nextLine();
         }
 
