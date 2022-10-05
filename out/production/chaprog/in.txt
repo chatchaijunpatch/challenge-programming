@@ -1,4 +1,4 @@
-3
-10 20 30 40
-7 5 12
-125 15 25
+1 thequickbrownfoxjumpsoverthelazydog
+3 thequickbrownfoxjumpsoverthelazydog
+4 testingthecodetofindtheerrortestandtestagain
+5 thearraycanbetoobigsobecarefulandtherecantberarecasescanbe
