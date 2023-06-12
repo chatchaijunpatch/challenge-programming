@@ -1,5 +1,5 @@
 // UVA100 The 3n + 1 problem
-//package AcHocProblem.UVA100;
+package AcHocProblem.UVA100;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -33,7 +33,7 @@ public class Main {
     }
     private void go() throws FileNotFoundException {
         // space complexity is O(n)
-//        sc = new Scanner(new FileInputStream("src/in.txt"));
+        sc = new Scanner(new FileInputStream("src/in.txt"));
         try{
         while (sc.hasNext()) {
             int i = sc.nextInt();
